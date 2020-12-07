@@ -1,0 +1,14 @@
+.border{
+    width: 25vw;
+    border: 1px solid black;
+    margin: 10px 0;
+}
+
+.badger{
+    max-height: 200px;
+    margin: 5px;
+}
+
+.hide{
+    display: none;
+}
