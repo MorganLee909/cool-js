@@ -19,12 +19,13 @@ blueBackgroundButton.addEventListener("click", function(){
 
 seizureButton.addEventListener("click", function(){
     stopButton.classList.remove("hide");
+
     seizureButton.classList.add("hide");
+
     interval = setInterval(function(){
         body.style.background = colors[colorCount];
         colorCount++;
         if(colorCount === colors.length){
-            console.log("running");
             colorCount = 0;
         }
     }, 100);
@@ -59,6 +60,7 @@ emailMaker.addEventListener("click", function(){
 //Create badgers
 let badgerButton = document.querySelector("#badgerButton");
 badgerButton.addEventListener("click", function(){
+    console.time("Badgers");
     let badgerCount = document.querySelector("#badgerCount").value;
     let badgerCage = document.querySelector("#badgerCage");
 
@@ -72,4 +74,5 @@ badgerButton.addEventListener("click", function(){
         image.classList.add("badger");
         badgerCage.appendChild(image);
     }
+    console.timeEnd("Badgers");
 });
